@@ -28,7 +28,7 @@ import { EventoRegistroComponent } from './Pages/evento-registro/evento-registro
     LayoutRoutingModule,
     SharedModule,
     ReactiveFormsModule,
-    MatDatepickerModule,
+    MatDatepickerModule, 
   ]
 })
 export class LayoutModule { }
