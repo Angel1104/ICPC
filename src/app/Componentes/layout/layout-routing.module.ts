@@ -6,6 +6,7 @@ import { ReporteComponent } from './Pages/reporte/reporte.component';
 import { EventoComponent } from './Pages/evento/evento.component';
 import { CompetenciaComponent } from './Pages/competencia/competencia.component';
 import { VisualizareventoComponent } from './Pages/visualizarevento/visualizarevento.component';
+import { EventoRegistroComponent } from './Pages/evento-registro/evento-registro.component';
 
 const routes: Routes = [{
   path:"", component: LayoutComponent,
@@ -15,6 +16,7 @@ const routes: Routes = [{
     {path: "evento", component:EventoComponent},
     {path: "competencia", component:CompetenciaComponent},
     {path: "visualizarevento", component:VisualizareventoComponent},
+    {path: "evento-registro", component:EventoRegistroComponent},
   ]
 }];
 
