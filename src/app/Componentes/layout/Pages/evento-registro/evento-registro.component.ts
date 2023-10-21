@@ -18,6 +18,7 @@ export class EventoRegistroComponent {
   descripcion = new FormControl('', [
     Validators.required,
     Validators.pattern(/^[a-zA-Z0-9-|_|!|#|%(|),.\s]{4,100}$/),
+
   ]);
 
   tipoEvento = new FormControl('', [
@@ -58,7 +59,7 @@ export class EventoRegistroComponent {
     if (this.descripcion.hasError('required')) {
       return 'Este campo obligatorio';
     }
-    return this.descripcion.hasError('pattern') ? 'La descripcion deben ser de 4 a 100 caracteres, pueden contener letras, números y caracteres especiales como ser: _ - ! % ()' : '';
+    return this.descripcion.hasError('pattern') ? 'La descripcion deben ser de 4 a 100 caracteres, pueden contener letras, números y caracteres especiales como ser: - | _ ! # % ( ) , . ' : '';
   }
 
   getFechaIniErrorMessage() {
@@ -86,7 +87,7 @@ export class EventoRegistroComponent {
     if (this.requisitos.hasError('required')) {
       return 'Este campo obligatorio';
     }
-    return this.requisitos.hasError('pattern') ? 'Los requisitos deben ser de máximo 1000 caracteres, pueden contener letras, números y caracteres especiales como ser: _ - ! % ()' : '';
+    return this.requisitos.hasError('pattern') ? 'Los requisitos deben ser de máximo 1000 caracteres, pueden contener letras, números y caracteres especiales como ser: - | _ ! # % ( ) , . ' : '';
   }
 
   getLugarErrorMessage() {
