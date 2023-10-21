@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-evento-registro',
@@ -94,4 +96,23 @@ export class EventoRegistroComponent {
     return this.lugar.hasError('pattern') ? 'El lugar debe ser de 3 a 20 caracteres, puede contener letras, números y caracteres especiales como ser: _ - ! % ()' : '';
   }
 
+  /*Sweet alert*/
+
+  constructor(private router: Router) {}
+
+  mostrarSweetAlert() {
+    Swal.fire({
+      title: '¿Estás seguro de cancelar el registro?',
+      text: "No se guardaran lo datos",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Aceptar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.router.navigate(['/admin/evento']);
+      }
+    });
+  }
 }

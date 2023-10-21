@@ -8,23 +8,30 @@ import { Router } from '@angular/router';
   styleUrls: ['./visualizarevento.component.css']
 })
 export class VisualizareventoComponent {
+
   constructor(private router: Router) {}
+
   mostrarSweetAlert() {
     Swal.fire({
       title: '¿Estás seguro de eliminar el evento?',
-      showDenyButton: true,
-      confirmButtonText: 'Aceptar',
-      denyButtonText: 'Cancelar',
+      text: "No se podra deshacer la acción",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Aceptar'
     }).then((result) => {
       if (result.isConfirmed) {
-        // Aquí puedes colocar el código para eliminar el evento
-        Swal.fire('Se ha eliminado el evento con éxito', '', 'success').then(() => {
-          // Después de eliminar el evento y mostrar el mensaje de éxito, redirige a la página de eventos
+        // Código para eliminar el evento
+        Swal.fire(
+          'Eliminado!',
+          'Se ha eliminado el evento con éxito',
+          'success'
+        ).then(() => {
           this.router.navigate(['/admin/evento']);
         });
-      } else if (result.isDenied) {
-        Swal.fire('Operación cancelada', '', 'error');
       }
     });
   }
+ 
 }
