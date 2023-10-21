@@ -1,99 +1,60 @@
+.example-container mat-form-field + mat-form-field {
+  margin-left: 8px;
+}
 
-.registro-container {
-    width: 100%; 
-    margin: 0; 
-    
+
+
+:host {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: 100vh;
     padding: 20px;
-    background-color: #c4c4c4c4;
-    font-family: Madrid;
-  }
-
-  .form-group {
-    margin-bottom: 10px;
-    
-    
-  }
-
-  h1 {
-    color: #000000;
+    box-sizing: border-box;
   }
   
-  label {
-    display: block;
-    margin-bottom: 5px;
-    color: #000000;
-  }
-  
-  input[type="text"],
-  input[type="date"],
-  select,
-  textarea {
-    width: 99%;
-    padding: 10px;    
-    border: 1px solid #ffffff;
-    border-radius: 4px;
-    background-color: #ffffff;
-    resize: none;
-  }
-  option {
-    width: 99%;
-    padding: 10px;    
-    border: 1px solid #ffffff;
-    border-radius: 4px;
-    background-color: #ffffff;
-  }
-  
-  textarea {
-    height: 100px;
-  }
-
-  input[type="file"]::-webkit-file-upload-button {
-    color: #000000; 
-  }
-
-  .image-preview {
-    text-align: center;
-  }
-  
-  .image-preview img {
-    max-width: 250px;
-    max-height: 250px;
-  }
-  
-  .form-buttons {
-    text-align: left;
-  }
-  
-  .delete-button {
-    background-color: #cf1f16;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    margin-right: 10px;
-    width: 95px;
-  }
-  
-  .volver-button {
-    background-color: #007be5;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 4px;
-    margin-right: 20px;
-    width: 95px;
-  }
-  
-  .modal-container {
-    position: fixed;
-    top: 0;
-    left: 0;
+  .campo {
     width: 100%;
-    height: 100%;
+    margin-bottom: 16px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  /*botones*/
+  
+  section {
+    display: table;
+  }
+  
+  .example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+  }
+  
+  .example-button-row {
+    display: table-cell;
+    max-width: 600px;
+  }
+  
+  .example-button-row .mat-mdc-button-base {
+    margin: 8px 8px 8px 0;
+  }
+  
+  .example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .example-button-container {
     display: flex;
     justify-content: center;
-    align-items: center;
-    z-index: 1;
-    background-color: #ffffff;
+    width: 120px;
   }
   
