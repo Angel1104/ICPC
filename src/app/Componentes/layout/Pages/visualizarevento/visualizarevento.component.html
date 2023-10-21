@@ -1,0 +1,55 @@
+<div class="registro-container">
+    <h1>Informacion del evento</h1>
+    <form>
+      <div class="form-group">
+        <label for="nombreEvento">Nombre evento</label>
+        <input type="text" id="nombreEvento" name="nombreEvento" value="Madness" readonly>
+      </div>
+      <div class="form-group">
+        <label for="tipoEvento">Tipo de evento</label>
+        <input type="text" id="tipoEvento" name="tipoEvento" value="Entrenamiento" readonly>
+      </div>
+      <div class="form-group">
+        <label for="descripcion">Descripción</label>
+        <textarea id="descripcion" name="descripcion" readonly>
+          Mucho alcohol muchas putas
+        </textarea>
+      </div>
+      <div class="form-group">
+        <label for="fechaInicio">Fecha inicio</label>
+        <input type="text" id="fechaInicio" name="fechaInicio" value="2023-02-20" readonly>
+      </div>
+      <div class="form-group">
+        <label for="fechaFin">Fecha fin</label>
+        <input type="text" id="fechaFin" name="fechaFin" value="2023-02-23" readonly>
+      </div>
+      <div class="form-group">
+        <label for="encargado">Encargado</label>
+        <input type="text" id="encargado" name="encargado" value="bad bunny" readonly>
+      </div>
+      <div class="form-group">
+        <label for="requisitos">Requisitos</label>
+        <textarea id="requisitos" name="requisitos" readonly>
+          Ser puto.
+        </textarea>
+      </div>
+      <div class="form-group">
+        <label for="imagen">Imagen</label>
+        <input type="file" id="imagen" name="imagen" accept=".jpg, .jpeg, .png" disabled>
+      </div>
+      <div class="image-preview">
+        <img src="ruta_de_imagen_de_muestra.jpg" alt="Vista previa de la imagen">
+      </div>
+      <div class="form-buttons">
+        <button type="button" class="volver-button">Volver</button>
+        <button type="button" class="delete-button" (click)="confirmarEliminacion()">Eliminar</button>
+      </div>
+    </form>
+  </div>
+  <div class="modal-container" *ngIf="mostrarModal">
+    <!-- <app-confirmacion-eliminacion
+      (confirmacion)="confirmacionEliminacion($event)"
+      (cerrar)="mostrarModal = false"
+    ></app-confirmacion-eliminacion> -->
+  </div>
+  

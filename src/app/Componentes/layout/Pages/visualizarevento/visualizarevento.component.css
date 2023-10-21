@@ -1,0 +1,99 @@
+
+.registro-container {
+    width: 80%; 
+    margin: 0; 
+    margin-left: 20%; 
+    padding: 20px;
+    background-color: #c4c4c4c4;
+    font-family: Madrid;
+  }
+
+  .form-group {
+    margin-bottom: 10px;
+    
+    
+  }
+
+  h1 {
+    color: #000000;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000000;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  select,
+  textarea {
+    width: 99%;
+    padding: 10px;    
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    background-color: #ffffff;
+    resize: none;
+  }
+  option {
+    width: 99%;
+    padding: 10px;    
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    background-color: #ffffff;
+  }
+  
+  textarea {
+    height: 100px;
+  }
+
+  input[type="file"]::-webkit-file-upload-button {
+    color: #000000; 
+  }
+
+  .image-preview {
+    text-align: center;
+  }
+  
+  .image-preview img {
+    max-width: 250px;
+    max-height: 250px;
+  }
+  
+  .form-buttons {
+    text-align: left;
+  }
+  
+  .delete-button {
+    background-color: #cf1f16;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-right: 10px;
+    width: 95px;
+  }
+  
+  .volver-button {
+    background-color: #007be5;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    margin-right: 20px;
+    width: 95px;
+  }
+  
+  .modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    background-color: #ffffff;
+  }
+  
