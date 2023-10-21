@@ -40,11 +40,19 @@
   <input matInput value="mi casa" readonly>
 </mat-form-field>
 
+<mat-card class="example-card">
+  <mat-card-header>
+    <div mat-card-avatar class="example-header-image"></div>
+    <mat-card-title>Imagen</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+</mat-card>
+
 <section>
   
   <div class="example-button-row">
     <button mat-raised-button>Editar</button>
-    <button mat-raised-button color="primary">Volver</button>
+    <button mat-raised-button color="primary" routerLink="/admin/evento">Volver</button>
     <button mat-raised-button color="warn">Eliminar</button>
   </div>
 </section>
