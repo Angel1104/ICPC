@@ -123,6 +123,18 @@ export class EventoRegistroComponent implements OnInit {
     
   }
 
+  crearEvento(){
+    Swal.fire({
+      // position: 'top-end',
+      icon: 'success',
+      title: 'Evento creado exitosamente',
+      showConfirmButton: false,
+      timer: 1500
+    }).then(() => {
+        this.router.navigate(['/admin/evento']);
+    });
+  }
+
   mostrarSweetAlert() {
     Swal.fire({
       title: '¿Estás seguro de cancelar el registro?',

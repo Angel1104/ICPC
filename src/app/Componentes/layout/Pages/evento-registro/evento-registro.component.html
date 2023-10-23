@@ -59,7 +59,7 @@
       
       <section>
         <div class="example-button-row">
-          <button mat-raised-button color="primary">Crear</button>
+          <button mat-raised-button color="primary" (click)="crearEvento()" routerLink="/admin/evento">Crear</button>
           <button mat-raised-button color="warn" (click)="mostrarSweetAlert()">Cancelar</button>
         </div>
       </section>
