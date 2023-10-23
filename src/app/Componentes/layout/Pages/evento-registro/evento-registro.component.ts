@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
-import { FormControl, Validators } from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormControl, Validators, FormGroup } from '@angular/forms';
 import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
+import { CreateEventI } from 'src/app/modelos/createEvent.int';
 
 @Component({
   selector: 'app-evento-registro',
   templateUrl: './evento-registro.component.html',
   styleUrls: ['./evento-registro.component.css'],
 })
-export class EventoRegistroComponent {
+export class EventoRegistroComponent implements OnInit {
 
   nombre = new FormControl('', [
     Validators.required,
@@ -21,7 +22,7 @@ export class EventoRegistroComponent {
 
   ]);
 
-  tipoEvento = new FormControl('', [
+  id_tipoEventos = new FormControl('', [
     Validators.required,
   ]);
 
@@ -100,6 +101,27 @@ export class EventoRegistroComponent {
   /*Sweet alert*/
 
   constructor(private router: Router) {}
+
+  formNuevoEvento = new FormGroup({
+    nombre: new FormControl(''),
+    descripcion: new FormControl(''),
+    fechaIni: new FormControl(''),
+    fechaFin: new FormControl(''),
+    requisitos: new FormControl(''),
+    encargado: new FormControl(''),
+    lugar: new FormControl(''),
+    id_tipoEventos: new FormControl(''),
+  });
+  
+  
+  ngOnInit(): void {
+      
+  }
+
+  agregarEvento(form:CreateEventI){
+    console.log(form);
+    
+  }
 
   mostrarSweetAlert() {
     Swal.fire({

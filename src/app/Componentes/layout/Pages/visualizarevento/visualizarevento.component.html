@@ -1,58 +1,60 @@
 <h1>Información del Evento</h1>
+<div style="margin:20px 0px 0px 40px">
+  <mat-form-field class="campo">
+    <mat-label>Nombre evento</mat-label>
+    <input matInput value={{data.nombre}} readonly>
+  </mat-form-field>
 
-<mat-form-field class="campo">
-  <mat-label>Nombre evento</mat-label>
-  <input matInput value="Madness" readonly>
-</mat-form-field>
+  <mat-form-field class="campo">
+    <mat-label>Tipo de evento:</mat-label>
+    <input matInput value={{data.id_tipoEventos}} readonly>
+  </mat-form-field>
 
-<mat-form-field class="campo">
-  <mat-label>Tipo de evento:</mat-label>
-  <input matInput value="Festival" readonly>
-</mat-form-field>
+  <mat-form-field class="campo">
+    <mat-label>Descripción:</mat-label>
+    <input matInput value={{data.descripcion}} readonly>
+  </mat-form-field>
 
-<mat-form-field class="campo">
-  <mat-label>Descripción:</mat-label>
-  <input matInput value="full culeo full cuqueo" readonly>
-</mat-form-field>
+  <mat-form-field class="campo">
+    <mat-label>Fecha de inicio:</mat-label>
+    <input matInput value={{data.fechaIni}} readonly>
+  </mat-form-field>
 
-<mat-form-field class="campo">
-  <mat-label>Fecha de inicio:</mat-label>
-  <input matInput value="hoy" readonly>
-</mat-form-field>
+  <mat-form-field class="campo">
+    <mat-label>Fecha de finalización:</mat-label>
+    <input matInput value={{data.fechaFin}} readonly>
+  </mat-form-field>
 
-<mat-form-field class="campo">
-  <mat-label>Fecha de finalización:</mat-label>
-  <input matInput value="al año" readonly>
-</mat-form-field>
+  <mat-form-field class="campo">
+    <mat-label>Encargado:</mat-label>
+    <input matInput value={{data.encargado}} readonly>
+  </mat-form-field>
 
-<mat-form-field class="campo">
-  <mat-label>Encargado:</mat-label>
-  <input matInput value="yo pues" readonly>
-</mat-form-field>
+  <mat-form-field class="campo">
+    <mat-label>Requisitos:</mat-label>
+    <input matInput value={{data.requisitos}} readonly>
+  </mat-form-field>
 
-<mat-form-field class="campo">
-  <mat-label>Requisitos:</mat-label>
-  <input matInput value="Ser puto" readonly>
-</mat-form-field>
+  <mat-form-field class="campo">
+    <mat-label>Lugar:</mat-label>
+    <input matInput value={{data.lugar}} readonly>
+  </mat-form-field>
 
-<mat-form-field class="campo">
-  <mat-label>Lugar:</mat-label>
-  <input matInput value="mi casa" readonly>
-</mat-form-field>
+  <mat-card class={{data.nombre}}>
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Imagen</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+  </mat-card>
 
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="example-header-image"></div>
-    <mat-card-title>Imagen</mat-card-title>
-  </mat-card-header>
-  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-</mat-card>
+  <section>
+    
+    <div class="example-button-row">
+      <button mat-raised-button>Editar</button>
+      <button mat-raised-button color="primary" routerLink="/admin/evento">Volver</button>
+      <button mat-raised-button color="warn" (click)="mostrarSweetAlert(data.id)">Eliminar</button>
+    </div>
+  </section>
 
-<section>
-  
-  <div class="example-button-row">
-    <button mat-raised-button>Editar</button>
-    <button mat-raised-button color="primary" routerLink="/admin/evento">Volver</button>
-    <button mat-raised-button color="warn" (click)="mostrarSweetAlert()">Eliminar</button>
-  </div>
-</section>
+</div>

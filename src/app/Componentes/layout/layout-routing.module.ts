@@ -15,7 +15,7 @@ const routes: Routes = [{
     {path: "reportes", component:ReporteComponent},
     {path: "evento", component:EventoComponent},
     {path: "competencia", component:CompetenciaComponent},
-    {path: "visualizarevento", component:VisualizareventoComponent},
+    {path: "visualizarevento/:id", component:VisualizareventoComponent},
     {path: "evento-registro", component:EventoRegistroComponent},
   ]
 }];

@@ -3,7 +3,11 @@
 <mat-card style="margin: 20px 40px 40px 40px">
 
     <mat-card-title>
-      <button mat-raised-button color="primary" routerLink="/admin/evento-registro" ><mat-icon mat-list-icon>add</mat-icon> Nuevo Evento</button>
+      <button 
+      mat-raised-button color="primary" 
+      routerLink="/admin/evento-registro" 
+      (click)="nuevoEvento()"
+      ><mat-icon mat-list-icon>add</mat-icon> Nuevo Evento</button>
     </mat-card-title>
     <mat-divider inset></mat-divider>
   
@@ -11,19 +15,24 @@
   
       <div class="mat-elevation-z2">
         <div class="section-card">
-          <mat-card class="card" *ngFor="let num of [1,2,3,4,5,6,7]">
+          <mat-card class="card" *ngFor="let item of data">
             <mat-card-header>
-              <mat-card-title> Nombre evento </mat-card-title>
+              <mat-card-title> {{item.nombre}} </mat-card-title>
             </mat-card-header>
             <img mat-card-image src="../../../../../assets/evento.jpg" alt="Photo of a Shiba Inu">
             <mat-card-content>
-              <p>Descripcion del evento</p>
-              <p>Fecha del evento</p>
+              <h4>Descripcion: </h4>
+              <p>{{item.descripcion}}</p>
+              <h4>Fecha inicio</h4>
+              <p>{{item.fechaIni}}</p>
+              <h4>Fecha fin</h4>
+              <p>{{item.fechaFin}}</p>
             </mat-card-content>
             <mat-card-actions>
               <button 
                 mat-raised-button color="primary"
-                routerLink="/admin/visualizarevento"
+                
+                (click)="editarEvento(item.id)"
                 >VISUALIZAR</button>
             </mat-card-actions>
           </mat-card>

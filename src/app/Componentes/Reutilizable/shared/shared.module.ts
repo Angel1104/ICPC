@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import {ReactiveFormsModule, FormsModule} from '@angular/forms'
-import { HttpClient } from "@angular/common/http";
+import { HttpClient, HttpClientModule,HttpClientJsonpModule } from "@angular/common/http";
 
 //Componentes de angular material
 import { MatCardModule } from '@angular/material/card';
@@ -31,12 +31,15 @@ import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MomentDateModule } from '@angular/material-moment-adapter';
+import { FormControl, Validators, FormGroup } from '@angular/forms';
 
 
 @NgModule({
   declarations: [],
   imports: [
-    CommonModule
+    CommonModule,
+    HttpClientModule,
+    HttpClientJsonpModule,
   ],
   exports: [
     CommonModule,
